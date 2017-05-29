@@ -1,35 +1,25 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-export class Hero {
-  id: number;
-  name: string;
-}
+import {Hero} from './hero';
 
 const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
+  {id: 11, name: 'Mr. Nice'},
+  {id: 12, name: 'Narco'},
+  {id: 13, name: 'Bombasto'},
+  {id: 14, name: 'Celeritas'},
+  {id: 15, name: 'Magneta'},
+  {id: 16, name: 'RubberMan'},
+  {id: 17, name: 'Dynama'},
+  {id: 18, name: 'Dr IQ'},
+  {id: 19, name: 'Magma'},
+  {id: 20, name: 'Tornado'}
 ];
 
 @Component({
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <div *ngIf="selectedHero">
-      <h2>{{selectedHero.name}} details!</h2>
-      <div><label>id: </label>{{selectedHero.id}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-      </div>
-    </div>
+    <hero-detail [hero]="selectedHero"></hero-detail>
     <hr>
     <h2>My Heroes</h2>
     <ul class="heroes">
@@ -45,12 +35,14 @@ const HEROES: Hero[] = [
       background-color: #CFD8DC !important;
       color: white;
     }
+
     .heroes {
       margin: 0 0 2em 0;
       list-style-type: none;
       padding: 0;
       width: 15em;
     }
+
     .heroes li {
       cursor: pointer;
       position: relative;
@@ -61,19 +53,23 @@ const HEROES: Hero[] = [
       height: 1.6em;
       border-radius: 4px;
     }
+
     .heroes li.selected:hover {
       background-color: #BBD8DC !important;
       color: white;
     }
+
     .heroes li:hover {
       color: #607D8B;
       background-color: #DDD;
       left: .1em;
     }
+
     .heroes .text {
       position: relative;
       top: -3px;
     }
+
     .heroes .badge {
       display: inline-block;
       font-size: small;
@@ -94,6 +90,7 @@ export class AppComponent {
   title = 'Tour of Heroes';
   heroes = HEROES;
   selectedHero: Hero;
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
