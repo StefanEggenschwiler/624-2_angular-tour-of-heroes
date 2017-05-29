@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component}          from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -10,7 +10,7 @@ import {Component} from '@angular/core';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Tour of Heroes';
