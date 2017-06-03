@@ -18,6 +18,11 @@ a {
   box-sizing: border-box;
 }
 
+h2 {
+  /*text-align: center;*/
+  margin-bottom: 0;
+}
+
 h3 {
   text-align: center;
   margin-bottom: 0;
@@ -31,22 +36,22 @@ h4 {
   margin: 0;
 }
 
-.col-1-4 {
+.row-1-4 {
   width: 25%;
 }
 
 .module {
-  padding: 20px;
-  text-align: center;
-  color: #eee;
+  padding: 10px;
+  /*text-align: center;*/
+  /*color: #eee;*/
   max-height: 120px;
-  min-width: 120px;
-  background-color: #607D8B;
+  min-width: 80px;
+  /*background-color: #607D8B;*/
   border-radius: 2px;
 }
 
 .module:hover {
-  background-color: #EEE;
+  /*background-color: #EEE;*/
   cursor: pointer;
   color: #607d8b;
 }

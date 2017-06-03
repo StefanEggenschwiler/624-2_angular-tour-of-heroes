@@ -1,0 +1,25 @@
+<h1>Arena of Champions</h1>
+<label>Pick the first Hero:</label>
+<br>
+<select class="select_join" [(ngModel)]="hero1">
+  <option *ngFor="let hero of heroes" [ngValue]="hero">{{hero.name}} ({{hero.strength}})</option>
+</select>
+
+<div *ngIf="hero1">
+  <br>
+  <label>Pick his Opponent:</label>
+  <br>
+  <select class="select_join" [(ngModel)]="hero2">
+    <option *ngFor="let hero of heroes" [ngValue]="hero">{{hero.name}} ({{hero.strength}})</option>
+  </select>
+</div>
+
+<div *ngIf="hero1 && hero2">
+  <br>
+  <button (click)="fight()">Fight!</button>
+</div>
+
+<div *ngIf="winner">
+  <hr>
+  <h2>THE WINNER IS {{winner.name | uppercase}} !!! CONGRATULATIONS !!!</h2>
+</div>

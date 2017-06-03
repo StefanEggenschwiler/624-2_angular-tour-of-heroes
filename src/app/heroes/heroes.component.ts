@@ -10,7 +10,7 @@ import {HeroService}         from '../services/hero.service';
 @Component({
   selector: 'my-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  styleUrls: ['./heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -23,18 +23,22 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService
       .getHeroes()
-      .then(heroes => this.heroes = heroes);
+      .then(heroes => {
+        this.heroes = heroes;
+        this.orderHeroes();
+      });
   }
 
-  add(name: string): void {
+  add(name: string, strength: number): void {
     name = name.trim();
     if (!name) {
       return;
     }
-    this.heroService.create(name)
+    this.heroService.create(name, strength)
       .then(hero => {
         this.heroes.push(hero);
         this.selectedHero = null;
+        this.orderHeroes();
       });
   }
 
@@ -59,5 +63,17 @@ export class HeroesComponent implements OnInit {
 
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedHero.id]);
+  }
+
+  orderHeroes(): void {
+    this.heroes.sort((a: Hero, b: Hero) => {
+      if (a.strength < b.strength) {
+        return 1;
+      } else if (a.strength > b.strength) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
   }
 }

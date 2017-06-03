@@ -1,0 +1,41 @@
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+.select_join {
+
+  width: 170px;
+  height: 28px;
+  overflow: hidden;
+  border: #000000 1px solid;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.select_join select {
+
+  background: transparent;
+  width: 170px;
+  font-size: 7pt;
+  color: grey;
+  border: 0;
+  border-radius: 0;
+  height: 28px;
+  -webkit-appearance: none;
+
+}
+
+.select_join select:focus {
+  outline: none;
+
+}

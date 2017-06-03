@@ -20,6 +20,19 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+      .then(heroes => this.orderHeroes(heroes));
+  }
+
+  orderHeroes(heroes: Hero[]): void {
+    heroes.sort((a: Hero, b: Hero) => {
+      if (a.victories > b.victories) {
+        return -1;
+      } else if (a.victories < b.victories) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+    this.heroes = heroes.slice(0, 4);
   }
 }
