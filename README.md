@@ -9,6 +9,7 @@ Step by step Angular 4 tutorial provided by Google. (https://angular.io/docs/ts/
 
 ## Solution:
 You can see the solution here: (**https://github.com/StefanEggenschwiler/624-2_angular-tour-of-heroes/commit/21c0fb16d61888e57f9e2b2d5cc60dbc2b239d01**)
+
 In order to checkout the exercise solution locally, you have to reset your local repository (**git reset --hard origin**).
 ```diff
 - This will overwrite all changes you made to the local code!
