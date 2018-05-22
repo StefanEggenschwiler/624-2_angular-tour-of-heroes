@@ -1,5 +1,5 @@
 # 624-2_angular-tour-of-heroes
-Step by step Angular 4 tutorial provided by Google. (https://angular.io/docs/ts/latest/tutorial/toh-pt1.html)
+Step by step Angular tutorial provided by Google. (https://angular.io/docs/ts/latest/tutorial/toh-pt1.html)
 
 ## Installation Instructions:
 1) Clone the project (**git clone https://github.com/StefanEggenschwiler/624-2_angular-tour-of-heroes.git {folderName}**)
