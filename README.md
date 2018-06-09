@@ -13,5 +13,5 @@ You can see the solution here: (**https://github.com/StefanEggenschwiler/624-2_a
 
 In order to checkout the exercise solution locally, you have to reset your local repository (**git reset --hard origin**).
 ```diff
-- This will overwrite all changes you made to the local code!
+- This will overwrite all changes you made to the local repository!
 ```
